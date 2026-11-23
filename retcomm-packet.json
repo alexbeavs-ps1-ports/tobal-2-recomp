@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "tobal-2-psx",
+  "name": "Tobal 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "tobal-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "479f1388"
+    ],
+    "md5": [
+      "9d583bcc0ee949f42e07fa8613939d8d"
+    ],
+    "sha1": [
+      "50edccaaccf002673a817047905372603e63e208"
+    ],
+    "disc_serials": [
+      "SLPM-86033"
+    ],
+    "sizes": [
+      669555600
+    ],
+    "filenames": [
+      "Tobal 2 (Japan) (Rev 1).cue",
+      "Tobal 2 (Japan) (Rev 1).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "6aa977c4b850e107deacce25d0f7d9d908feec9bfc9e533b955b4b70615f6c57"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5500.BIN",
+    "profile": "SCPH5500",
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/tobal-2-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "tobal-2-*-windows-x64.zip",
+      "linux-x64": "tobal-2-*-linux-x64.zip",
+      "macos-arm64": "tobal-2-*-macos-arm64.zip",
+      "macos-x64": "tobal-2-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "tobal_2.exe",
+    "linux": "tobal_2",
+    "macos": "tobal_2"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/tobal-2-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
